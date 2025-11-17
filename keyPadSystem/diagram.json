@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Aung Naing Thu",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 77.4, "left": -19.8, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -290, "left": 149.6, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -214.4,
+      "left": -196,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "keypad1:R1", "uno:5", "green", [ "v0", "h-67.2" ] ],
+    [ "keypad1:R2", "uno:4", "green", [ "v0", "h-58" ] ],
+    [ "keypad1:R3", "uno:3", "green", [ "v0", "h-57.9" ] ],
+    [ "keypad1:R4", "uno:2", "green", [ "v0", "h-57.8" ] ],
+    [ "keypad1:C1", "uno:9", "green", [ "v0", "h-144.1" ] ],
+    [ "keypad1:C2", "uno:8", "green", [ "v0", "h-144" ] ],
+    [ "keypad1:C3", "uno:7", "green", [ "v0", "h-134.55" ] ],
+    [ "keypad1:C4", "uno:6", "green", [ "v0", "h-134.7" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h-28.8", "v489.7", "h364.8" ] ],
+    [ "lcd1:GND", "uno:GND.1", "black", [ "h-19.2", "v192", "h9.6" ] ],
+    [ "lcd1:SDA", "uno:A4", "green", [ "h-9.6", "v489.8", "h432" ] ],
+    [ "lcd1:SCL", "uno:A5", "green", [ "h9.6", "v499.5", "h422.4" ] ]
+  ],
+  "dependencies": {}
+}
